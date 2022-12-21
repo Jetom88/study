@@ -5,6 +5,7 @@ const Navigate = () => {
     <div>
       <h3>머리</h3>
       <Outlet />
+      <br />
       <footer>푸터</footer>
     </div>
   );

@@ -1,5 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Comp from "./components/Comp";
+import List from "./components/List";
+
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Navigate from "./components/Navigate";
@@ -13,6 +16,8 @@ function App() {
         </Route>
 
         <Route path="/login" element={<Login />} />
+        <Route path="/comp" element={<Comp />} />
+        <Route path="/list" element={<List />} />
       </Routes>
     </BrowserRouter>
   );
