@@ -6,6 +6,7 @@ import List from "./components/List";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Navigate from "./components/Navigate";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/comp" element={<Comp />} />
         <Route path="/list" element={<List />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );
