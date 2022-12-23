@@ -14,7 +14,7 @@ const Home = () => {
       <br />
       <Link to="/comp">tab</Link>
       <br />
-      <Link to="/list">list</Link>
+      <Link to="/ikea">ikea Clone</Link>
     </div>
   );
 };
