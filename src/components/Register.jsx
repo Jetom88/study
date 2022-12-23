@@ -3,7 +3,11 @@ import { useForm } from "react-hook-form";
 
 const Register = () => {
   const [show, setShow] = useState(false);
-  const { register, watch, handleSubmit } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
   const onValid = (data) => console.log(data, "onvalid");
   const onInvalid = (data) => console.log(data, "onInvalid");
@@ -16,7 +20,8 @@ const Register = () => {
 
   return (
     <form onSubmit={handleSubmit(onInvalid, onValid)}>
-      <input {...register("id", { required: "id 입력", minLength: 5 })} ref={inputRef} />
+      <input {...register("id", { required: "id 입력", minLength: 5, pattern: { message: "hello" } })} ref={inputRef} />
+      {errors.id && errors.message}
       <br />
       <input {...register("password")} type={show ? "text" : "password"} />
       <br />
